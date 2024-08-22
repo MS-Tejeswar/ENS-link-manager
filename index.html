@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENS Link Manager</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+    
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Container to Centralize Content */
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Heading Styles */
+        h2, h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        /* Input Fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Buttons */
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        /* Hidden Sections */
+        .hidden {
+            display: none;
+        }
+
+        /* Section Padding */
+        .section-padding {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- User Type Selection Section -->
+        <div id="userTypeSection">
+            <h2>Are you a new or existing user?</h2>
+            <button id="newUserBtn">New User</button>
+            <button id="existingUserBtn">Existing User</button>
+        </div>
+
+        <!-- New User Section -->
+        <div id="newUserSection" class="hidden section-padding">
+            <h2>Enter your ENS Name (.eth)</h2>
+            <input type="text" id="ensInput" placeholder="e.g. alice.eth" required>
+            <button id="checkEns">Check ENS</button>
+
+            <div id="linkSection" class="hidden">
+                <h3>ENS Name Found!</h3>
+                <input type="text" id="linkInput" placeholder="Enter your URL" required>
+                <button id="submitLink">Submit</button>
+            </div>
+        </div>
+
+        <!-- Existing User Section -->
+        <div id="existingUserSection" class="hidden section-padding">
+            <h2>Update your ENS Link</h2>
+            <input type="text" id="existingEnsInput" placeholder="e.g. alice.eth" required>
+            <input type="text" id="oldLinkInput" placeholder="Enter your previous URL" required>
+            <input type="text" id="newLinkInput" placeholder="Enter your new URL" required>
+            <button id="updateLink">Update Link</button>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Link to external JS file -->
+</body>
+</html>
