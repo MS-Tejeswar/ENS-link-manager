@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 const cors = require('cors');
 
 app.use(cors());
-const mongoUri = 'mongodb+srv://msatya2k3:iyQkBsbHTis8cmvs@cluster0.7h7dc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // Replace with your MongoDB URI
+const mongoUri = 'mongodb+srv://msatya2k3:<password>@cluster0.7h7dc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // Replace with your MongoDB URI
 mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Route to update the link for an existing ENS name
