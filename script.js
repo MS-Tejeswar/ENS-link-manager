@@ -1,4 +1,4 @@
-const providerUrl = 'https://eth-mainnet.alchemyapi.io/v2/g5gtMZaWBSsyu8TvUTqlieTV1tVgt4WY';
+const providerUrl = 'https://eth-mainnet.alchemyapi.io/v2/<alchemy api key>';
 const web3 = new Web3(new Web3.providers.HttpProvider(providerUrl));
 
 document.getElementById('newUserBtn').addEventListener('click', function () {
