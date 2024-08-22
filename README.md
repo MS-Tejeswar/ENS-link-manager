@@ -1,7 +1,3 @@
-# ENS-link-manager
-Below is a draft for a README file for your ENS management web application project. This document provides an overview of the project, instructions for setting it up, and details about its functionality.
-
----
 
 # ENS Management Web Application
 
